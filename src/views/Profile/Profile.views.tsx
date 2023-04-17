@@ -34,10 +34,6 @@ export default function Profile() {
   } = useProfilePagination(username);
 
   // Checks before loading data to ui...
-  if (isLoading) {
-    return <div><Loader /></div>;
-  }
-
   if (error) {
     return (
       <div>
@@ -51,10 +47,6 @@ export default function Profile() {
         />
       </div>
     )
-  }
-
-  if (!userData) {
-    return <div>User not found.</div>;
   }
 
   return (
@@ -81,15 +73,20 @@ export default function Profile() {
             </>
           )}
         </div>
-        <ProfileRepos
-          currentRepos={currentRepos}
-        />
-        <ProfilePagination
-          paginate={paginate}
-          repos={repos}
-          reposPerPage={reposPerPage}
-          currentPage={currentPage}
-        />
+        {
+          isLoading
+            ? <div><Loader /></div>
+            : <>
+              <ProfileRepos currentRepos={currentRepos} />
+              <ProfilePagination
+                paginate={paginate}
+                repos={repos}
+                reposPerPage={reposPerPage}
+                currentPage={currentPage}
+              />
+            </>
+        }
+
       </div>
     </div>
   );

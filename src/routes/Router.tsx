@@ -1,17 +1,28 @@
-import {
-  createBrowserRouter,
-} from "react-router-dom";
-import { Search, Profile, ErrorPage } from "../views/index.views";
+import React, { Suspense } from "react";
+import { createBrowserRouter } from "react-router-dom";
+import Loader from "../components/Loader.comp";
 
-export const router = createBrowserRouter([
+const Search = React.lazy(() => import("../views/Search/Search.views"));
+const Profile = React.lazy(() => import("../views/Profile/Profile.views"));
+const ErrorPage = React.lazy(() => import("../views/ErrorPage/ErrorPage.views"));
+
+const router = createBrowserRouter([
   {
     path: "/",
-    element: <Search />,
+    element: (
+      <Suspense fallback={<div><Loader /></div>}>
+        <Search />
+      </Suspense>
+    ),
     errorElement: <ErrorPage />
   },
   {
     path: "/profile/:username",
-    element: <Profile />,
+    element: (
+      <Suspense fallback={<div><Loader /></div>}>
+        <Profile />
+      </Suspense>
+    ),
     errorElement: <ErrorPage />
   }
 ]);
