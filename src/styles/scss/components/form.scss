@@ -1,0 +1,18 @@
+.form {
+
+  &-container {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &-inputfield {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid var(--light-color);
+    width: 100%;
+
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+}

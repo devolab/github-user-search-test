@@ -1,0 +1,20 @@
+@import "base/themes";
+
+//generics...
+@import "generic/normalize.scss";
+@import "generic/box-sizing.scss";
+
+//base...
+@import "./base/scaffolding";
+@import "./base/typography";
+
+//components...
+@import "./components/pagination";
+@import "./components/button";
+@import "./components/form";
+@import "./components/home";
+@import "./components/profile";
+@import "./components/loader";
+
+// events
+@import "./components/error";

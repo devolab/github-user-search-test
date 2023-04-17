@@ -1,0 +1,65 @@
+.profile {
+
+  &-page {
+    background-color: var(--light-color);
+
+    .repos-list {
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      width: 500px;
+
+      .repo-item {
+        padding: 16px;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--border-color);
+        }
+
+        .repo-name {
+          font-size: 20px;
+          font-weight: 500;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+
+        .repo-description {
+          font-size: 16px;
+          color: var(--dark-color);
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+
+    .repos-count {
+      font-size: 16px;
+      color: var(--dark-color);
+      margin: 0;
+
+      .repos-text {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 24px;
+  }
+
+  &-name {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--info-)
+  }
+}

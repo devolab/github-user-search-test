@@ -1,0 +1,45 @@
+$theme: (
+  primary: rgb(0, 0, 0),
+  secondary: rgb(255, 255, 255),
+  info: rgb(23, 162, 184),
+  danger: rgb(220, 53, 69),
+  light: rgb(218, 220, 221),
+  dark: rgb(52, 58, 64),
+);
+
+// Default color values
+$primary-color: map-get($theme, primary);
+$secondary-color: map-get($theme, secondary);
+$info-color: map-get($theme, info);
+$danger-color: map-get($theme, danger);
+$light-color: map-get($theme, light);
+$dark-color: map-get($theme, dark);
+
+
+// Set :root color variables based on $theme
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --info-color: #{$info-color};
+  --danger-color: #{$danger-color};
+  --light-color: #{$light-color};
+  --dark-color: #{$dark-color};
+  --border-color: var(--dark-color)
+}
+
+// Toggle between light and dark UI
+body {
+  &.dark {
+    --primary-color: #{$primary-color};
+    --secondary-color: #{$secondary-color};
+    --info-color: #{$info-color};
+    --danger-color: #{$danger-color};
+    --light-color: #{$dark-color};
+    --dark-color: #{$light-color};
+    --border-color: var(--dark-color)
+  }
+}
+
+.git-background {
+  background: var(--info-color) url("https://mikegerwitz.com/images/octoright-large.png") repeat left center;
+}

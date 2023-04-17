@@ -1,0 +1,37 @@
+.button {
+  border: 0 none;
+  padding: 10px 20px;
+  width: 100%;
+
+  &-submit {
+    margin-top: 20px;
+    background-color: var(--info-color);
+    color: var(--primary-color);
+  }
+
+  &-navigate {
+    font-size: 12px;
+    width: 125px;
+    margin-top: 7px;
+    background-color: var(--info-color);
+    color: var(--primary-color);
+  }
+
+  &-info-hover {
+    &:hover {
+      cursor: pointer;
+      background-color: var(--info-color);
+      opacity: 0.75;
+    }
+  }
+
+  &-pagination {
+    transition: all 0.2s ease-in-out;
+
+    &:hover,
+    &.active {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+  }
+}
