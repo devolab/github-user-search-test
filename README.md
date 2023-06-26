@@ -23,7 +23,7 @@ I've also used the .env file (which has been committed to this repo). Please not
 Firstly, please follow these instructions:
 
 1. Go to your terminal and open the folder where you want to clone the app
-2. Copy and paste the following line to bootstrap the app: `git clone https://github.com/devolab/lovelystay-frontend-test.git`
+2. Copy and paste the following line to bootstrap the app: `git clone https://github.com/devolab/github-user-search-test.git`
 3. Once the clone has been completed, write: `github-user-search-test`
 4. Write: `yarn` to install the node_modules
 5. To start the development environment, run: `yarn dev`
