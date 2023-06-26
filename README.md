@@ -1,8 +1,6 @@
 # GitHub User Search - Front End Test
 
-This is the FrontEnd test for Lovely Stay.
-Before starting, I'd like to thank you for this opportunity.
-
+This is the FrontEnd test.
 Please NOTE: This site has been used and tested ONLY on Chrome.
 
 For this test, I've used the following techs:
